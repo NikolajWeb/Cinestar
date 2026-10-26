@@ -14,11 +14,11 @@ import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/404.jsx";
 
 /* Nav - Footer */
-/* import Navigation from "./components/navigation/Navigation.jsx";
-import PageFooter from "./components/pageFooter/PageFooter.jsx"; */
+import Navigation from "./components/navigation/Navigation.jsx";
+import PageFooter from "./components/pageFooter/PageFooter.jsx";
 
 /* Loaders */
-/* import backofficeLoader from "./loaders/DataLoaders.jsx"; */
+import backofficeLoader from "./loaders/DataLoaders.jsx";
 
 /* Layout */
 function AppLayout() {
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
 
-      {
+      /* {
         path: "/login",
         element: <Login />,
       },
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
         path: "/backoffice",
         element: <Backoffice />,
         loader: backofficeLoader,
-      },
+      }, */
 
       {
         path: "*",

@@ -1,0 +1,181 @@
+/* NAVIGATION */
+.navigation {
+    position: relative;
+    height: 100px;
+    z-index: 10;
+}
+
+/* BURGER MENU CONTAINER */
+.burger {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 15;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    box-sizing: border-box;
+
+    border-radius: 15px 0;
+    cursor: pointer;
+}
+
+/* BURGER AND CLOSE ICONS */
+.burger img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+
+    filter: brightness(0) saturate(100%) invert(53%) sepia(76%) saturate(1275%) hue-rotate(336deg) brightness(97%) contrast(93%);
+}
+
+/* LOGO */
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 10;
+
+    display: block;
+    width: 150px;
+    max-width: calc(100% - 90px);
+    height: auto;
+
+    transform: translateY(-50%);
+    object-fit: contain;
+}
+
+/* MENU OVERLAY - MOBILE */
+.navOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    background: var(--color-black);
+    overflow-y: auto;
+
+    transform: translateY(-100%);
+    transition:
+        transform 0.3s ease-in-out,
+        visibility 0.3s ease-in-out;
+
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* ACTIVE MOBILE MENU */
+.navOverlayActive {
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+}
+
+/* PREVENT SCROLL WHEN MENU IS OPEN */
+body:has(.navOverlay.navOverlayActive) {
+    overflow: hidden;
+}
+
+/* NAVIGATION LINKS - MOBILE */
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 100px 40px 40px;
+
+    list-style: none;
+}
+
+/* LINKS */
+.navLinks a {
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* ACTIVE LINK */
+.navLinks .active {
+    color: var(--color-primary);
+}
+
+/* DESKTOP NAVIGATION */
+@media screen and (min-width: 768px) {
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    /* HIDE BURGER AND CLOSE ICON */
+    .burger {
+        display: none;
+    }
+
+    /* LOGO ON THE LEFT */
+    .logo {
+        position: static;
+        flex-shrink: 0;
+
+        max-width: 200px;
+        transform: none;
+    }
+
+    .navOverlay {
+        position: static;
+        z-index: 5;
+
+        width: auto;
+        height: 100px;
+
+        background: transparent;
+        overflow: visible;
+
+        transform: none;
+        transition: none;
+
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    .navLinks {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 25px;
+
+        width: auto;
+        height: 100%;
+        min-height: 0;
+
+        padding: 0;
+    }
+
+    /* DESKTOP LINKS */
+    .navLinks a {
+        font-size: 1rem;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+}
