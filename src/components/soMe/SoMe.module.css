@@ -1,0 +1,85 @@
+
+.SoMeContainer {
+    text-align: center;
+    padding: 2rem;
+}
+
+.info {
+    color: var(--color-primary);
+    padding-block: 2rem;
+    font-size: 1.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
+    padding-block: 2rem;
+}
+
+.link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(75%);
+}
+
+.link:nth-child(3),
+.link:nth-child(4) {
+    grid-row-start: 2;
+}
+
+.link:nth-child(5) {
+    grid-column: 1 / -1;
+    grid-row-start: 3;
+}
+
+/* Desktop: kun logoer */
+@media (min-width: 768px) {
+    .grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link a {
+        font-size: 0;
+    }
+
+    .linkText {
+        display: none;
+    }
+
+    .icon {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* Mobil: logoer og tekst */
+@media (max-width: 767px) {
+    .link a {
+        font-size: 1.2rem;
+    }
+
+    .linkText {
+        display: inline;
+    }
+
+    .icon {
+        display: none;
+    }
+}
