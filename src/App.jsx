@@ -11,7 +11,7 @@ import Blog from "./pages/Blog.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
 import Login from "./pages/login/Login.jsx";
-
+import Backoffice from "./pages/backoffice/Backoffice.jsx";
 import NotFound from "./pages/404.jsx";
 
 /* Nav - Footer */
@@ -72,11 +72,11 @@ const router = createBrowserRouter([
         element: <Login />,
       },
 
-      /* {
+      {
         path: "/backoffice",
         element: <Backoffice />,
         loader: backofficeLoader,
-      }, */
+      },
 
       {
         path: "*",

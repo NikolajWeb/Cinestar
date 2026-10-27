@@ -1,0 +1,10 @@
+.backoffice {
+    background-color: azure;
+    height: 1200px
+}
+
+.header{
+    text-align: center;
+    color: var(--color-black);
+    padding-block: 2rem;
+}
