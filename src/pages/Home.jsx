@@ -1,14 +1,14 @@
 
 // Components
 import SoMe from "../components/soMe/SoMe";
+import Services from "../components/services/Services";
 
 const Home = () => {
 
     return (
         <article>
 
-        <h1>Helloo world!</h1>
-
+        <Services/>
         <SoMe/>
         </article>
     );
