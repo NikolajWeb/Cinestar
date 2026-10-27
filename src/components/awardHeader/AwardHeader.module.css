@@ -1,0 +1,138 @@
+.awardContainer {
+    text-align: center;
+}
+
+/* Header med baggrundsbillede */
+.headerContainer {
+    position: relative;
+    min-height: 400px;
+    padding: 3rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.headerContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(to bottom,
+            transparent 20%,
+            var(--color-black) 100%),
+        url("../../assets/studio.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+/* Headertekst */
+.name,
+.headerTitle {
+    display: block;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.headerTitle {
+    margin-bottom: 1rem;
+}
+
+.infoText {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.orangeText {
+    color: var(--color-primary);
+}
+
+/* Awards */
+.awards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+.awards img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+/* Desktop */
+@media (min-width: 768px) {
+    .awardContainer {
+        position: relative;
+    }
+
+    .headerContainer {
+        min-height: 550px;
+        padding-bottom: 120px;
+    }
+
+    /* Fjern gradienten på desktop */
+    .headerContainer::before {
+        background-image: url("../../assets/studio.jpg");
+        opacity: 0.5;
+
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+
+    .headerTitle {
+       font-size: 2rem;
+    }
+
+    .infoText {
+        max-width: 400px;
+    }
+
+    /* Awards oven på billedet */
+    .awards {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        padding: 1rem;
+    }
+
+    .awards img {
+        max-width: 160px;
+    }
+}
