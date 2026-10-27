@@ -4,7 +4,7 @@ import styles from "./Navigation.module.css";
 
 import burgerIcon from "../../assets/icons/burger_menu.svg";
 import xIcon from "../../assets/icons/x_icon.svg";
-import logo from "../../../public/logo.png";
+import logo from "../../assets/logo.png"
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
