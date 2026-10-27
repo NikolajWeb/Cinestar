@@ -1,0 +1,51 @@
+
+.section {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+} & h2 {
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+
+.table th,
+.table td {
+  padding: 12px;
+  font-weight: 500;
+  color: var(--color-black);
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.table img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.table button {
+  margin: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100px;
+}
+
+button {
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
