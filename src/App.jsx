@@ -10,6 +10,7 @@ import Home from "./pages/Home.jsx";
 import Blog from "./pages/Blog.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
+import Login from "./pages/login/Login.jsx";
 
 import NotFound from "./pages/404.jsx";
 
@@ -24,10 +25,9 @@ import backofficeLoader from "./loaders/DataLoaders.jsx";
 function AppLayout() {
   const location = useLocation();
 
-  const isLoginPage = location.pathname === "/login";
   const isBackoffice = location.pathname === "/backoffice";
 
-  const minimalLayout = isLoginPage || isBackoffice;
+  const minimalLayout = isBackoffice;
 
   return (
     <main>
@@ -67,12 +67,12 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
 
-      /* {
+      {
         path: "/login",
         element: <Login />,
       },
 
-      {
+      /* {
         path: "/backoffice",
         element: <Backoffice />,
         loader: backofficeLoader,

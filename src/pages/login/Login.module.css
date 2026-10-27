@@ -1,0 +1,105 @@
+.title {
+    text-transform: uppercase;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.title p {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.loginForm {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.loginForm input {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    padding: 1rem;
+    font-size: 1rem;
+    color: gray;
+    margin-block: 1rem;
+
+}
+
+.loginForm button {
+    border: 1px solid var(--color-primary);
+    background-color: transparent;
+    color: var(--color-primary);
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    max-width: 100%;
+    cursor: pointer;
+    margin-block: 1rem;
+}
+
+.error {
+    color: rgb(194, 72, 72);
+    text-align: left;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .title {
+        padding: 2rem;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .loginContainer {
+        border-top: 1px solid var(--color-primary);
+        border-bottom: 1px solid var(--color-primary);
+        padding: 2rem;
+    }
+
+    .loginForm {
+        max-width: 600px;
+        margin-inline: auto;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .loginForm input {
+        font-size: 1.1rem;
+    }
+
+    .loginForm button {
+        font-size: 1.4rem;
+        padding: 1rem 3rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .title {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .loginContainer {
+        padding-block: 2rem;
+    }
+
+    .loginForm {
+        text-align: center;
+    }
+
+    .loginForm input {
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    .loginForm button {
+        font-size: 1.5rem;
+        padding: 1rem 3rem;
+    }
+}
