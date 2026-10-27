@@ -1,3 +1,7 @@
+
+// Components
+import SoMe from "../components/soMe/SoMe";
+
 const Home = () => {
 
     return (
@@ -5,6 +9,7 @@ const Home = () => {
 
         <h1>Helloo world!</h1>
 
+        <SoMe/>
         </article>
     );
 };
