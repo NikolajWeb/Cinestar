@@ -60,6 +60,7 @@ const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ />,
+        loader: backofficeLoader,
       },
 
       {

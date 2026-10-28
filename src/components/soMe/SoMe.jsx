@@ -16,8 +16,8 @@ const SoMe = () => {
 
             <p className={styles.info}>
                 Cinestar Studio <br />
-                +123-456-789 <br />
-                hello@awesomesite.com
+                +45 12 34 56 78 <br />
+                cinestar@production.dk
             </p>
 
 
