@@ -1,6 +1,8 @@
 import { useState } from "react";
 import * as yup from "yup";
 
+import PageHeader from "../../components/pageHeader/PageHeader";
+
 import styles from "./Login.module.css";
 
 const loginSchema = yup.object({
@@ -46,6 +48,13 @@ const Login = () => {
 
     return (
         <article className={styles.loginContainer}>
+            <PageHeader
+                Title="Login "
+                Breadcrum={[
+                    { label: "Forside", path: "/" },
+                    { label: "Login", path: "/login" },
+                ]}
+            />
             <div className={styles.title}>
                 <p>Login</p>
                 <h1>backoffice</h1>
