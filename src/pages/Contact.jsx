@@ -1,9 +1,17 @@
+
+import PageHeader from "../components/pageHeader/PageHeader";
+
 const Contact = () => {
 
     return (
         <article>
-
-        <h1>Helloo world!</h1>
+            <PageHeader
+                Title="Kontakt "
+                Breadcrum={[
+                    { label: "Forside", path: "/" },
+                    { label: "Kontakt", path: "/contact" },
+                ]}
+            />
 
         </article>
     );

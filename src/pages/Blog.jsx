@@ -1,9 +1,18 @@
+
+import PageHeader from "../components/pageHeader/PageHeader";
+
 const Blog = () => {
 
     return (
         <article>
+            <PageHeader
+                Title="Blog Arkiv "
+                Breadcrum={[
+                    { label: "Forside", path: "/" },
+                    { label: "Blog Arkiv", path: "/blog" },
+                ]}
+            />
 
-        <h1>Helloo world!</h1>
 
         </article>
     );
