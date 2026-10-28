@@ -1,12 +1,19 @@
+
+import { useLoaderData } from "react-router-dom";
+
+// Components
+import Faq from "../components/faq/Faq";
+import SoMe from "../components/soMe/SoMe";
+
 const FAQ = () => {
+    const { faqs } = useLoaderData();
 
     return (
         <article>
-
-        <h1>Helloo world!</h1>
-
+            <Faq faqs={faqs} />
+            <SoMe />
         </article>
     );
 };
 
-export default FAQ; 
+export default FAQ;
