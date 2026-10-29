@@ -1,5 +1,7 @@
 
 import PageHeader from "../components/pageHeader/PageHeader";
+import Newsletter from "../components/newsletter/Newsletter";
+import SoMe from "../components/soMe/SoMe";
 
 const Blog = () => {
 
@@ -12,7 +14,8 @@ const Blog = () => {
                     { label: "Blog Arkiv", path: "/blog" },
                 ]}
             />
-
+            <Newsletter />
+            <SoMe />
 
         </article>
     );
