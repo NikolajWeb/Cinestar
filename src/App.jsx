@@ -8,6 +8,7 @@ import {
 /* Pages */
 import Home from "./pages/Home.jsx";
 import Blog from "./pages/Blog.jsx";
+import BlogDetail from "./components/blogDetails/BlogDetails.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
 import Login from "./pages/login/Login.jsx";
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+        loader: backofficeLoader,
+      },
+      {
+        path: "/blog/:id",
+        element: <BlogDetail />,
         loader: backofficeLoader,
       },
 
