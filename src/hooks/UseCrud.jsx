@@ -1,7 +1,10 @@
+import { useRevalidator } from "react-router";
 import { serverPath } from "../settings.jsx";
 
 const useCrud = () => {
-    // Hjælpefunktion til at håndtere alle API-svar
+    const revalidator = useRevalidator();
+
+    // Håndterer API-svar
     const handleResponse = async (response) => {
         const text = await response.text();
 
@@ -32,6 +35,7 @@ const useCrud = () => {
 
             throw new Error(message);
         }
+
         return data;
     };
 
@@ -55,7 +59,11 @@ const useCrud = () => {
                 }
             );
 
-            return await handleResponse(response);
+            const result = await handleResponse(response);
+
+            revalidator.revalidate();
+
+            return result;
         } catch (error) {
             console.error("Create error:", error);
             throw error;
@@ -72,7 +80,11 @@ const useCrud = () => {
                 }
             );
 
-            return await handleResponse(response);
+            const result = await handleResponse(response);
+
+            revalidator.revalidate();
+
+            return result;
         } catch (error) {
             console.error("Delete error:", error);
             throw error;
@@ -90,7 +102,11 @@ const useCrud = () => {
                 }
             );
 
-            return await handleResponse(response);
+            const result = await handleResponse(response);
+
+            revalidator.revalidate();
+
+            return result;
         } catch (error) {
             console.error("Update error:", error);
             throw error;
@@ -101,7 +117,6 @@ const useCrud = () => {
         create,
         remove,
         update,
-
         isLoading: false,
         error: null,
     };

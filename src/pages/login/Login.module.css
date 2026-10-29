@@ -55,11 +55,6 @@
         text-align: center;
     }
 
-    .loginContainer {
-        border-top: 1px solid var(--color-primary);
-        border-bottom: 1px solid var(--color-primary);
-        padding: 2rem;
-    }
 
     .loginForm {
         max-width: 600px;
@@ -85,12 +80,10 @@
         font-size: 1.5rem;
     }
 
-    .loginContainer {
-        padding-block: 2rem;
-    }
 
     .loginForm {
         text-align: center;
+        height: 400px;
     }
 
     .loginForm input {

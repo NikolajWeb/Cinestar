@@ -1,5 +1,5 @@
-
-import { useCrud } from "../../../../hooks/useCrud";
+import { useCrud } from "../../../../hooks/UseCrud";
+import { toast } from "react-toastify";
 import styles from "./BlogSection.module.css";
 
 const BlogsSection = ({ blogs = [], onAdd, onEdit }) => {
@@ -14,8 +14,19 @@ const BlogsSection = ({ blogs = [], onAdd, onEdit }) => {
 
     try {
       await remove("blog", blog._id);
+
+      toast.success("Blogindlægget blev slettet!", {
+        autoClose: 3000,
+      });
     } catch (error) {
       console.error("Kunne ikke slette blogindlægget:", error);
+
+      toast.error(
+        error?.message || "Kunne ikke slette blogindlægget.",
+        {
+          autoClose: 3000,
+        }
+      );
     }
   };
 
