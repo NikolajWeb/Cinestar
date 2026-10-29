@@ -8,25 +8,25 @@ import { MdVideoCameraBack } from "react-icons/md";
 const services = [
     {
         icon: FaFilm,
-        title: "Filmproduktion",
+        title: "Film produktion",
         description:
             "Vi skaber professionelle filmproduktioner, der formidler dit budskab klart, engagerende og visuelt overbevisende.",
     },
     {
         icon: FaRegImages,
-        title: "Kreativ retning",
+        title: "en Kreativ retning",
         description:
             "Vi sikrer en kreativ retning, der løfter dit projekt fra almindeligt til uforglemmeligt.",
     },
     {
         icon: MdVideoCameraBack,
-        title: "TV-produktion",
+        title: "TV produktion",
         description:
             "Vi leverer komplette løsninger inden for formatudvikling, optagelse og redigering.",
     },
     {
         icon: RiMusicFill,
-        title: "Musikvideo",
+        title: "Musik video",
         description:
             "Lad din musik træde frem i et visuelt univers, der forstærker din lyd og dit budskab.",
     },

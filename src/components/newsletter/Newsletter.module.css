@@ -1,0 +1,130 @@
+.newsletterContainer {
+    position: relative;
+    isolation: isolate;
+    padding: 3rem 1rem;
+}
+
+.newsletterContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("../../assets/liquifer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.header {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-block: 1rem 2rem;
+}
+
+.infoText {
+    line-height: 1.5;
+}
+
+.newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    max-width: 450px;
+    margin-block: 20px;
+}
+
+.newsletter input,
+.tilmeld {
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 1rem;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    border-right: none;
+    padding: 0 10px;
+}
+
+.tilmeld {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding-inline: 1.25rem;
+    font-family: var(--font-body);
+    cursor: pointer;
+    width: auto;
+    border-radius: 0 5px 5px 0;
+}
+
+.succes {
+    flex-basis: 100%;
+    margin: 10px 0 0;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .newsletterContainer {
+        padding: 4rem 2rem;
+    }
+
+    .header {
+        font-size: 1.6rem;
+    }
+
+    .newsletter input,
+    .tilmeld {
+        height: 55px;
+        font-size: 1.1rem;
+    }
+
+    .tilmeld {
+        padding-inline: 2rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .newsletterContainer {
+        text-align: center;
+        padding: 5rem 3rem;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+
+    .infoText {
+        font-size: 2rem;
+        width: 1200px;
+        margin-inline: auto;
+    }
+
+    .newsletter {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .newsletter input,
+    .tilmeld {
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .tilmeld {
+        padding-inline: 2.5rem;
+    }
+}
