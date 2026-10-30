@@ -17,16 +17,18 @@ const getData = async (
 };
 
 export const backofficeLoader = async () => {
-    const [blogs, faqs, reviews] = await Promise.all([
+    const [blogs, faqs, reviews, messages] = await Promise.all([
         getData("/blogs"),
         getData("/faqs"),
         getData("/reviews"),
+        getData("/messages"),
     ]);
 
     return {
         blogs,
         faqs,
         reviews,
+        messages,
     };
 };
 

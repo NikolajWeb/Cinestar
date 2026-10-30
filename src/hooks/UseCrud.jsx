@@ -92,13 +92,16 @@ const useCrud = () => {
     };
 
     // UPDATE
-    const update = async (endpoint, formData) => {
+    const update = async (endpoint, data) => {
         try {
             const response = await fetch(
                 `${serverPath}/${endpoint}`,
                 {
                     method: "PUT",
-                    body: formData,
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
                 }
             );
 
