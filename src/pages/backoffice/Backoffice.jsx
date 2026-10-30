@@ -8,10 +8,12 @@ import "react-toastify/dist/ReactToastify.css";
 // Components
 import BlogsSection from "./components/blogSection/BlogSection";
 import BlogForm from "./forms/BlogForm";
+import MessagesSection from "./components/messagesSection/MessagesSection";
 
 const Backoffice = () => {
   const {
     blogs = [],
+    messages = [],
   } = useLoaderData();
 
   const [showForm, setShowForm] = useState(false);
@@ -50,6 +52,10 @@ const Backoffice = () => {
           onClose={handleClose}
         />
       )}
+
+      <MessagesSection
+        messages={messages}
+      />
 
       <ToastContainer
         position="top-right"
