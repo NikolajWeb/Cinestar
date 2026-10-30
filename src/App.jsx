@@ -45,13 +45,17 @@ function AppLayout() {
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    HydrateFallback: () => (
+      <div className="loading">
+        <p>Loading...</p>
+      </div>
+    ),
     children: [
       {
         path: "/",
         element: <Home />,
         loader: backofficeLoader,
       },
-
       {
         path: "/blog",
         element: <Blog />,
@@ -62,29 +66,24 @@ const router = createBrowserRouter([
         element: <BlogDetail />,
         loader: backofficeLoader,
       },
-
       {
         path: "/faq",
         element: <FAQ />,
         loader: backofficeLoader,
       },
-
       {
         path: "/contact",
         element: <Contact />,
       },
-
       {
         path: "/login",
         element: <Login />,
       },
-
       {
         path: "/backoffice",
         element: <Backoffice />,
         loader: backofficeLoader,
       },
-
       {
         path: "*",
         element: <NotFound />,
